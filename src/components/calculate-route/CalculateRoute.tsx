@@ -13,7 +13,7 @@ const CalculateRoute = () => {
     return (
         <>
             <Box display="flex" flexDirection="row">
-                <ContentHeader text='Calculate Route Locations'/>
+                <ContentHeader text='Calculate Route'/>
                 <Button sx={{marginLeft: 'auto'}} variant="contained" color="warning" onClick={() => {
                     setRouteData(null)
                     setCalculateRouteLocations([])

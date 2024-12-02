@@ -70,9 +70,9 @@ const HomeMap = () => {
     
             const styleIcon = new Style({
               image: new Icon({
-                src: 'https://openlayers.org/en/latest/examples/data/icon.png',
+                src: '/predefined-map-marker.png',
                 anchor: [0.5, 1],
-                scale: 0.6,
+                scale: 0.08,
               })
             })
             const styleLabel = new Style({
@@ -86,7 +86,7 @@ const HomeMap = () => {
                   color: '#fff',
                   width: 3
                 }),
-                offsetY: -30
+                offsetY: -50
               })
             })
     
@@ -164,7 +164,7 @@ const HomeMap = () => {
           let hasMarker = false;
           map.forEachFeatureAtPixel(event.pixel, (feature) => { 
             if(feature.get('type') === 'predefined-location-marker') {
-              alert(`You cannot edit a predefined location')}`)
+              alert(`You cannot edit a predefined location`)
               hasMarker = true;
             } else if(feature.get('type') === 'user-location-marker') {              
               setClickedLocation({x: feature.getGeometry().getCoordinates()[0], 

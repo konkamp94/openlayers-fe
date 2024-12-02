@@ -15,6 +15,7 @@ const LocationForm = ({ x, y, name, id}) => {
     // const { setUserLocations } = useContext(LocationsContext);
     
     useEffect(() => {
+        if(!x || !y) return;
         setLocationData((prev) => ({
             name,
             lng: toLonLat([x, y])[0],
